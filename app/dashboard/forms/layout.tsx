@@ -20,7 +20,7 @@ const sidebarNavItems = [
   },
   {
     title: "Manage Users",
-    href: "/dashboard/forms/appearance",
+    href: "/dashboard/forms/users",
   },
   {
     title: "Wallet",

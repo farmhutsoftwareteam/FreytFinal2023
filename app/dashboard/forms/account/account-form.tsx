@@ -94,7 +94,7 @@ export function OrganizationForm() {
         <input type="url" name="website" id="website" className="mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
       </div>
 
-      <button type="submit" className="mt-4 p-2 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
+      <button type="submit" className="mt-4 p-2 bg-orange-600 text-white rounded-md shadow hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
     </form>
   );
 }
