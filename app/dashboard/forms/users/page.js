@@ -1,7 +1,11 @@
 "use client"
 import React, { useState } from 'react';
+import AddUserModal from './components/addUserModal.js';
+
 
 function UserList({ users }) {
+
+
   return (
     <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left text-gray-500">
@@ -35,15 +39,23 @@ function UserList({ users }) {
 }
 
 export default function UserManagement() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [users, setUsers] = useState([
     { name: 'Jane Doe', role: 'Admin' },
     { name: 'John Smith', role: 'Employee' },
     // Add more dummy data as needed
   ]);
 
-  const addUser = () => {
-    const newUser = { name: `New User ${users.length + 1}`, role: 'Employee' };
-    setUsers([...users, newUser]);
+  const addUser = (user) => {
+    if (user) {
+      setUsers([...users, user]);
+    }
+    setIsModalOpen(false);
+  };
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
   };
 
   return (
@@ -51,13 +63,14 @@ export default function UserManagement() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-xl font-semibold">Users</h1>
         <button
-          onClick={addUser}
+          onClick={handleOpenModal}
           className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-md"
         >
           Add User
         </button>
       </div>
       <UserList users={users} />
+      {isModalOpen && <AddUserModal onClose={addUser} />}
     </div>
   );
 }
