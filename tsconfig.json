@@ -24,6 +24,6 @@
     ],
     "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/dashboard/components/user-nav.js", "app/dashboard/page.tsx", "app/dashboard/forms/account/account-form.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/dashboard/components/user-nav.js", "app/dashboard/page.tsx", "app/dashboard/forms/organization/account-form.js", "app/dashboard/forms/profile-form.js"],
   "exclude": ["node_modules"]
 }
